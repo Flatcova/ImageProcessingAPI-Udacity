@@ -5,12 +5,11 @@
 
 ## Project Overview
 
-Welcome to my Image Processing API project, In this project, you will see how I build an API, with Node.js and Express for handling the app 
-process, and creating all the testing with Jasmine. Everything was developed with TypeScript and compiled to JS on the dist folder. The main purpose of this project is to take some parameters throw the URL, and depending on the values that where sended, create a new resized image, and saved it localy.
+Welcome to my Image Processing API project. This project will show how I build an API using Node.js, TypeScript, and Express. The primary purpose of this project resize images upon some input variables and store them locally. In addition, we utilize a caching mechanism to void unnecessary processing.
 
 ![Sample Input Image][image1]
 
-This is an image example that was received throw the endpoint that wanted to be changed, the result was the next image, saved in the new-image folder and now every time the user wants the same image, it will be cache from there.
+This is an image example that processed trough the endpoint, the result was the next image, saved in the new-image folder and now every time the user wants the same image, it will be cache from there.
 
 ![Output Image resized to 100x100][image2]
 
@@ -43,12 +42,12 @@ npm i
 
 3. Run the script to compile the /src folder
 ```
-npm build
+npm run build
 ```
 
 4. Run the command to initialize the project already compiled inside the /dist folder
 ```
-node dist/app.jss
+npm run start
 ```
 
 5. Open your browser on ``localhost:3000`` and go to the endpoint ``/images`` once there you will see an error displaying missing information
@@ -82,7 +81,7 @@ npm run test
 
 3. For running the TypeScript version on src folder, I use ```Nodemon``` to be able to see changes on the server while develop.
 ```
-npm run start
+npm run dev
 ```
 
 
