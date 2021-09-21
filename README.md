@@ -66,7 +66,7 @@ example: ``localhost:3000/images?name=fjord&width=100&height=100``
 
 ### Aditional Scripts
 
-1. to run eslint and prettier you can use the next scripts and check for any error and clean the code.
+1. Run eslint and prettier, you can use the next scripts to check for any error and clean the code.
 ```
 npm run lint
 ```
@@ -75,7 +75,12 @@ following by
 npm run prettier
 ```
 
-2. For running the TypeScript version on src folder, I use ```Nodemon``` to be able to see changes on the server while develop.
+2. Testing script will run the ``build`` script first and once created the ``/dist`` folder it would run jasmine for all the Unit test.
+```
+npm run test
+```
+
+3. For running the TypeScript version on src folder, I use ```Nodemon``` to be able to see changes on the server while develop.
 ```
 npm run start
 ```
