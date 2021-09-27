@@ -8,10 +8,12 @@ export const imageCache = async (
   res: express.Response,
   next: express.NextFunction,
 ): Promise<void> => {
+  const { name, width, height } = res.locals.input;
+
   const values: imageInput = {
-    name: req.query.name as unknown as string,
-    width: Number(req.query.width),
-    height: Number(req.query.height),
+    name: name,
+    width: width,
+    height: height,
     inputDir: INPUT_DIR,
     outputDir: OUTPUT_DIR,
   };

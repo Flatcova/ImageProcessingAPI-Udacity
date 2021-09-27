@@ -5,10 +5,11 @@ const types_1 = require("../types");
 const image_validation_1 = require("../utilities/image-validation");
 const logger_1 = require("../utilities/logger");
 const imageCache = async (req, res, next) => {
+    const { name, width, height } = res.locals.input;
     const values = {
-        name: req.query.name,
-        width: Number(req.query.width),
-        height: Number(req.query.height),
+        name: name,
+        width: width,
+        height: height,
         inputDir: types_1.INPUT_DIR,
         outputDir: types_1.OUTPUT_DIR,
     };
