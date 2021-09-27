@@ -14,4 +14,4 @@ export interface imageInput extends validInput {
 export const INPUT_DIR = './images';
 export const OUTPUT_DIR = './new-images';
 
-export const FULL_PATH = path.join(__dirname, `.${OUTPUT_DIR}`);
+export const FULL_PATH = path.resolve('new-images');

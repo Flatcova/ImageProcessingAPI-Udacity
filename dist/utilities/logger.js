@@ -13,11 +13,13 @@ const colors = {
     debug: 'white',
 };
 winston_1.default.addColors(colors);
+const format = winston_1.default.format.combine(winston_1.default.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss:ms' }), winston_1.default.format.colorize({ all: true }), winston_1.default.format.printf((info) => `${info.timestamp} ${info.level}: ${info.message} - ${info.error}`));
 const logger = winston_1.default.createLogger({
     transports: [
         new winston_1.default.transports.Console(),
-        new winston_1.default.transports.File({ filename: 'combined.log' }),
+        new winston_1.default.transports.File({ filename: 'image-api.log' }),
     ],
+    format,
 });
 exports.context = {
     logger: logger,

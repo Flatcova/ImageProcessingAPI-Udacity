@@ -16,7 +16,7 @@ const imageCreation = async (input, context) => {
         return true;
     }
     catch (error) {
-        context.logger.error('resize', { error });
+        context.logger.error('Error while creating new image', { error });
         return false;
     }
 };

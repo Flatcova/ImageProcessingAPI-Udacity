@@ -7,4 +7,4 @@ exports.FULL_PATH = exports.OUTPUT_DIR = exports.INPUT_DIR = void 0;
 const path_1 = __importDefault(require("path"));
 exports.INPUT_DIR = './images';
 exports.OUTPUT_DIR = './new-images';
-exports.FULL_PATH = path_1.default.join(__dirname, `.${exports.OUTPUT_DIR}`);
+exports.FULL_PATH = path_1.default.resolve('new-images');
